@@ -1,0 +1,9 @@
+string1 = input("Enter your text: \n")
+string2 = string1[::-1]
+
+print("Your text: \n\"{}\" \nis backward:\n\"{}\" \n".format(string1.lower(), string2.lower()))
+
+if string1.lower() == string2.lower():
+    print("Your text is palindrome")
+else:
+    print("Your text is NOT palindrome")
