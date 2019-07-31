@@ -1,0 +1,11 @@
+import random
+
+a = range(1, random.randint(5,20))
+b = range(5,random.randint(15,40))
+c = []
+
+for number in a:
+    if number in b:
+        if number not in c:
+            c.append(number)
+print(c)
