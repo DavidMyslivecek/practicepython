@@ -1,0 +1,9 @@
+x = range(1,1001)
+y = []
+number = int(input("Enter a number to list all numbers divisible by this number: \n"))
+
+for element in x:
+    if (element % number) == 0:
+        y.append(element)
+
+print(y)
