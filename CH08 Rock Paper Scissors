@@ -1,0 +1,26 @@
+import random
+print("\nWelcome in rock, paper scissors, for stop playing type \"stop\"\n")
+while True:
+
+    p1 = input("\nEnter your move (rock, paper, scissors): \n\n")
+    p2 = random.choice(["rock", "paper", "scissors"])
+
+    p1_low = p1.lower()
+
+    if p1_low == "rock" or p1_low == "paper" or p1_low == "scissors":
+        print(p2)
+
+        if p1_low == p2:
+            print("\n it`s a TIE\n")
+
+        elif (p1_low == "rock" and p2 == "paper") or (p1_low == "paper" and p2 == "scissors") or (p1_low == "scissors" and p2 == "rock"):
+            print("\nYou LOOSE\n")
+
+        elif (p1_low == "paper" and p2 == "rock") or (p1_low == "rock" and p2 == "scissors" or p1_low == "scissors" and p2 == "paper"):
+            print("\nYou WIN!\n")
+
+    elif p1_low == "stop":
+        print("\nThanks for playing!")
+        break
+    else:
+        print("\nYou have to choose from rock, paper or scissors\n")
