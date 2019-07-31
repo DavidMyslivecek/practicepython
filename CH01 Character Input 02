@@ -1,0 +1,15 @@
+import datetime
+
+now = datetime.date.today()
+
+name = input("Enter your name: \n")
+age = int(input("Hi {}, enter your age: \n".format(name.title())))
+year = int((now.year - age + 100 ))
+
+message = "Okay {}, you are {} and you will be 100 in year {}\n".format(name.title(), age, year)
+
+print(message)
+
+number = int(input("And now {}, give me a random number\n".format(name.title())))
+
+print(message * number)
