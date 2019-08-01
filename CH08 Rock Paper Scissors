@@ -1,4 +1,6 @@
 import random
+import os
+os.system("clear")
 print("\nWelcome in rock, paper scissors, for stop playing type \"stop\"\n")
 while True:
 
@@ -12,12 +14,19 @@ while True:
 
         if p1_low == p2:
             print("\n it`s a TIE\n")
+            input("Press Enter to continue...\n")
+            os.system("clear")
+
 
         elif (p1_low == "rock" and p2 == "paper") or (p1_low == "paper" and p2 == "scissors") or (p1_low == "scissors" and p2 == "rock"):
             print("\nYou LOOSE\n")
+            input("Press Enter to continue...\n")
+            os.system("clear")
 
         elif (p1_low == "paper" and p2 == "rock") or (p1_low == "rock" and p2 == "scissors" or p1_low == "scissors" and p2 == "paper"):
             print("\nYou WIN!\n")
+            input("Press Enter to continue...\n")
+            os.system("clear")
 
     elif p1_low == "stop":
         print("\nThanks for playing!")
