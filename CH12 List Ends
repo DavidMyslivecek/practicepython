@@ -1,0 +1,12 @@
+
+def get_list():
+    a = [5, 10, 15, 20, 25]
+    print("Your list is: {}\n".format(a))
+    return a
+
+def new_list(a):
+    b = [a[0], a[-1]]
+    print("Your new list is {}\n".format(b))
+    return b
+
+new = new_list(get_list())
