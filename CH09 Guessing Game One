@@ -1,0 +1,35 @@
+import random
+
+
+def get_number():
+    return random.randint(1, 9)
+
+
+print("\nLets play game, guess what number (1 - 9) I am thinking. Type exit to quit. \n")
+
+repeat = True
+
+while repeat:
+    number = get_number()
+    guess = ""
+    guess_int = 0
+    count = 0
+
+    while guess_int != number:
+        guess = input("\nEnter your guess: \n")
+        if guess == "exit":
+            print("Thanks for playing!")
+            repeat = False
+            break
+        guess_int = int(guess)
+        if number == guess_int:
+            count += 1
+            print("\nThats it, you WIN! Number of guesses: {}\n".format(count))
+            repeat = False
+            break
+        elif number > guess_int:
+            print("\nYour guess is too LOW. Try again.")
+            count += 1
+        elif number < guess_int:
+            print("\nYour guess is too HIGH. Try again.")
+            count += 1
