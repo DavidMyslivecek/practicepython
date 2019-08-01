@@ -1,0 +1,20 @@
+
+def get_number(number="\nGive me a number: \n"):
+    return int(input(number))
+
+
+print("This program will determine if your number is prime\n")
+
+num = get_number()
+div = range(2, num-1)
+a = [x for x in div]
+b = []
+
+for element in a:
+    if num % element == 0:
+        b.append(element)
+
+if not b:
+    print("This number is prime")
+else:
+    print("This number is NOT a prime and can be divided by {}".format(b))
