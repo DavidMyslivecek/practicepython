@@ -1,0 +1,27 @@
+
+def get_number():
+    number = int(input("Enter your number: \n"))
+    return number
+
+
+def fibonacci(number):
+    c = number
+    d = 1
+    lst = [1]
+    while c != 0:
+        if d == 1:
+            lst.append(d)
+            d = d + d
+            c -= 1
+        else:
+            lst.append(d)
+            d = d + lst[-2]
+            c -= 1
+    return lst
+
+
+def print_all(lst):
+    print("Your fibonacci is: {}".format(lst))
+
+
+print_all(fibonacci(get_number()))
